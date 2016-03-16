@@ -1,0 +1,32 @@
+name: RandomItem-Ext
+main: LDX\RandomItem\Main
+version: 4.3.5
+api: [1.0.0, 2.0.0]
+author: 
+- LDX 
+- Kingcc
+load: POSTWORLD
+website: 
+- "https://github.com/LDX-MCPE/RandomItem"
+- "https://github.com/kingcc/RandomItem-Ext"
+
+commands:
+  gift:
+    permission: randomitem.gift
+    description: Gives a random item
+    usage: /gift [player]
+  giftcode:
+    permission:
+    description: Gives a random item
+    usage: /giftcode [player]
+permissions:
+  randomitem:
+    description: Allows access to all RandomItem features.
+    default: false
+    children:
+      randomitem.gift:
+        description: Allows players to use the gift command.
+        default: op
+      randomitem.receive:
+        description: Allows players to receive random items.
+        default: true
